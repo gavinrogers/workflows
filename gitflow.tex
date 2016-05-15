@@ -1,0 +1,24 @@
+\documentclass{article}
+
+\usepackage{subcaption}
+\usepackage{gitdags}
+
+\begin{document}
+
+\begin {figure}
+  \begin{subfigure}[b]{\textwidth}
+    \centering
+    \begin{tikzpicture}
+      % gitflow
+      \gitDAG[grow right sep = 2em]{
+        tag01 -- tag02 -- tag1,
+        tag01 -- {tag02, hotfix1, dev01},
+        hotfix1 -- {tag02, dev03},
+        dev04 -- r1 -- r2 -- r3 -- tag1,
+        dev01 -- dev02 --dev03 -- dev04
+      };
+    \end{tikzpicture}
+    \vspace{1cm}
+  \end{subfigure}
+\end{figure}
+\end{document} 

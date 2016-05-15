@@ -1,0 +1,13 @@
+\documentclass[preview]{standalone}
+
+\usepackage{gitdags}
+
+\begin{document}
+  \centering
+  \begin{tikzpicture}
+    % Commit DAG
+    \gitDAG[grow right sep = 2em]{
+      A -- B -- C
+    };
+  \end{tikzpicture}
+\end{document}
